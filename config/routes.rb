@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   resources :posts
   resources :comments
   resources :users
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  root 'articles#home'
-  get "articles/index"
-  get "articles/home_p"
+  # Defines the root path route ("/")
+  # root "articles#index"
 end

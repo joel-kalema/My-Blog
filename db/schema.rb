@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_13_130658) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_13_173123) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,8 +20,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_13_130658) do
     t.string "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "users_id"
-    t.index ["users_id"], name: "index_comments_on_users_id"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -39,10 +37,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_13_130658) do
     t.integer "likes_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "users_id", null: false
-    t.bigint "likes_id", null: false
-    t.index ["likes_id"], name: "index_posts_on_likes_id"
-    t.index ["users_id"], name: "index_posts_on_users_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,18 +46,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_13_130658) do
     t.integer "posts_counter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "users_id", null: false
-    t.bigint "likes_id", null: false
-    t.bigint "posts_id", null: false
-    t.index ["likes_id"], name: "index_users_on_likes_id"
-    t.index ["posts_id"], name: "index_users_on_posts_id"
-    t.index ["users_id"], name: "index_users_on_users_id"
   end
 
-  add_foreign_key "comments", "users", column: "users_id"
-  add_foreign_key "posts", "likes", column: "likes_id"
-  add_foreign_key "posts", "users", column: "users_id"
-  add_foreign_key "users", "likes", column: "likes_id"
-  add_foreign_key "users", "posts", column: "posts_id"
-  add_foreign_key "users", "users", column: "users_id"
 end
