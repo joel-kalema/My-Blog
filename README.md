@@ -2,12 +2,18 @@
 
 # My Bolg
 
-> Description the project.
+> It's time to get backlinks and that make difference.
 
 ## Built With
 
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img
+      src="https://user-images.githubusercontent.com/57408419/178755770-7704dd7c-7bf2-4225-ad65-be3f1e4d1e2d.png"
+      alt="react" width="60" height="60" /> </a>
+
 - Ruby on Rails
 - PostgreSQL
+
+## ![my_blog](https://user-images.githubusercontent.com/57408419/178746647-93ad6791-aa60-46ce-bfec-1e56865cb5d2.jpg)
 
 ## Getting Started
 
@@ -53,11 +59,15 @@ rails s
 rspec
 ```
 
-👤 **Author1**
+## Authors
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+<a href="https://github.com/joel-kalema" target="blank"><img align="center"
+      src="https://user-images.githubusercontent.com/57408419/163676914-ad94695e-ba9f-4fea-9a06-02a93c7797a5.jpg"
+      alt="adampithewan" height="50" width="50"/></a> **JOEL KALEMA**
+
+- GitHub: [@joel-kalema](https://github.com/joel-kalema)
+- Twitter: [@JoelJklm](https://www.linkedin.com/in/joel-kalema-30518a230/)
+- LinkedIn: [joel kalema](https://twitter.com/JoelJklm)
 
 ## 🤝 Contributing
 
