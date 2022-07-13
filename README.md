@@ -6,14 +6,17 @@
 
 ## Built With
 
-<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img
+<a href="https://guides.rubyonrails.org/index.html" target="_blank" rel="noreferrer"> <img
       src="https://user-images.githubusercontent.com/57408419/178755770-7704dd7c-7bf2-4225-ad65-be3f1e4d1e2d.png"
-      alt="react" width="60" height="60" /> </a>
+      alt="react" width="70" height="60" /> </a>
+<a href="https://www.postgresql.org/" target="_blank" rel="noreferrer"> <img
+      src="https://user-images.githubusercontent.com/57408419/178756727-8bfad119-18c2-49eb-98be-8b2d4bd71dd6.jpeg"
+      alt="react" width="80" height="60" /> </a>
 
 - Ruby on Rails
 - PostgreSQL
 
-## ![my_blog](https://user-images.githubusercontent.com/57408419/178746647-93ad6791-aa60-46ce-bfec-1e56865cb5d2.jpg)
+## ![My blog](https://user-images.githubusercontent.com/57408419/178756743-c79afe4e-f60e-4ecb-90f9-de2edf808458.png)
 
 ## Getting Started
 
