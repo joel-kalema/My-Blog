@@ -11,6 +11,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%=link_to "home", root_path %>
+    <%=link_to "about", articles_home_p_path %>
+    <%=link_to "articles", articles_index_path %>
+    <%# <a href="/">Home</a>
+    <a href="/home_p">about</a>
+    <a href="/articals">Articals</a> %>
+    <div>
+      <%= yield %>
+    </div>
   </body>
 </html>
