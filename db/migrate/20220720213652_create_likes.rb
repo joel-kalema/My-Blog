@@ -1,8 +1,7 @@
-class CreateLikes < ActiveRecord::Migration[7.0]
-  def change
-    create_table :likes do |t|
+# frozen_string_literal: true
 
-      t.timestamps
-    end
+class CreateLikes < ActiveRecord::Migration[7.0] # rubocop:todo Style/Documentation
+  def change
+    create_table :likes, &:timestamps
   end
 end

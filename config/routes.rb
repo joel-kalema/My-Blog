@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
-  get 'login/index'
-  resources :users, only: [:index, :show] do
-    resources :posts
+  get '/users/:id', to: 'users#show'
+  resources :users do
+    resources :posts, only: %i[index show]
   end
   resources :login
 end
