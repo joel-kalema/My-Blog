@@ -1,0 +1,17 @@
+<div class="header">
+    <h1>My Blog</h1>
+</div>
+
+<% @users.each do |user| %>
+    <div class="user_container">
+        <a href ="<%= user_path(user) %>" class="users">
+            <div class="user">
+                <img src="<%= user.photo %>" />
+                <div class="user_data">
+                    <h1><%= user.name %></h1>
+                    <p>Number of posts: <%= user.posts_counter %></p>
+                </div>
+            </div>
+        </a>
+    </div>
+<% end %>
