@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-class PostsController < ApplicationController # rubocop:todo Style/Documentation
+class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
   end

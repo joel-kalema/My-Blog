@@ -1,6 +1,4 @@
-# frozen_string_literal: true
-
-class LoginController < ApplicationController # rubocop:todo Style/Documentation
+class LoginController < ApplicationController
   def index
     @form = User.new
   end
