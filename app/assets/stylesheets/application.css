@@ -119,6 +119,32 @@ a {
     margin-top: 20px auto;
 }
 
+.posts {
+    width: 70%;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.posts a {
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.schow_posts {
+    width: 100%;
+    margin: 20px auto;
+    padding: 2rem;
+    border: 1px rgb(197, 197, 197) solid;
+}
+
+.schow_posts h3 {
+    margin-bottom: 20px;
+}
+
+.see_post {
+    width: 70%;
+    margin: 20px auto;
+}
+
 
 
 
