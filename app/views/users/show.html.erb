@@ -1,10 +1,22 @@
-<p style="color: green"><%= notice %></p>
+<div class="posts">
+<img src="<%= @user.photo %>" />
+<h1><%= @user.name %></h1>
+<h2><%= @user.bio %></h2>
+<p><%= @user.posts_counter %></p>
 
-<%= render @user %>
-
-<div>
-  <%= link_to "Edit this user", edit_user_path(@user) %> |
-  <%= link_to "Back to users", users_path %>
-
-  <%= button_to "Destroy this user", @user, method: :delete %>
+    <% @user.posts.each do |post| %>
+        <div class="schow_posts">
+        <h3><%=post.title %></h3>
+        <p><%=post.text %></p>
+        <p><%=post.comments_counter %>
+        <p><%=post.likes_counter %>
+        <h3>Commetes</h3>
+        <% post.comments.each do |comment| %>
+            <p><%=comment.text %></p>
+        <% end %>
+        </div>
+    <% end %>
+    <%= link_to user_posts_path(@user) do%>
+        <button>See all posts</button>
+    <% end %>
 </div>
