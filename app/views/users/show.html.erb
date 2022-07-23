@@ -1,8 +1,8 @@
 <div class="posts">
-<img src="<%= @user.photo %>" />
-<h1><%= @user.name %></h1>
-<h2><%= @user.bio %></h2>
-<p><%= @user.posts_counter %></p>
+    <img src="<%= @user.photo %>" />
+    <h1><%= @user.name %></h1>
+    <h2><%= @user.bio %></h2>
+    <p><%= @user.posts_counter %></p>
 
     <% @user.posts.each do |post| %>
         <div class="schow_posts">

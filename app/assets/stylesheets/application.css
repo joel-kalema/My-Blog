@@ -145,6 +145,11 @@ a {
     margin: 20px auto;
 }
 
+label {
+    width: 30%;
+    height: 3rem;
+}
+
 
 
 
