@@ -1,16 +1,18 @@
 <div class="posts">
-<a href ="<%=user_post_path%>">
+    <img src="<%= @user.photo %>" />
+    <h1><%= @user.name %></h1>
+    <h2><%= @user.bio %></h2>
+    <p><%= @user.posts_counter %></p>
     <% @posts.each do |post| %>
-        <div class="schow_posts">
-        <h3><%=post.title %></h3>
-        <p><%=post.text %></p>
-        <p><%=post.comments_counter %>
-        <p><%=post.likes_counter %>
-        <h3>Commetes</h3>
-        <% post.comments.each do |comment| %>
-            <p><%=comment.text %></p>
-        <% end %>
-        </div>
+            <div class="schow_posts">
+                <h3><%=post.title %></h3>
+                <p><%=post.text %></p>
+                <p>comment: <%=post.comments_counter %>
+                <p>likes: <%=post.likes_counter %>
+                <h3>Commetes</h3>
+                <% post.comments.each do |comment| %>
+                    <p><%=comment.text %></p>
+                <% end %>
+            </div>
     <% end %>
-    </a>
 </div>

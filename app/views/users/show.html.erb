@@ -8,12 +8,8 @@
         <div class="schow_posts">
         <h3><%=post.title %></h3>
         <p><%=post.text %></p>
-        <p><%=post.comments_counter %>
-        <p><%=post.likes_counter %>
-        <h3>Commetes</h3>
-        <% post.comments.each do |comment| %>
-            <p><%=comment.text %></p>
-        <% end %>
+        <p>comment: <%=post.comments_counter %>
+        <p>likes: <%=post.likes_counter %>
         </div>
     <% end %>
     <%= link_to user_posts_path(@user) do%>
