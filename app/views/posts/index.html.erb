@@ -1,5 +1,5 @@
 <div class="posts">
-<a href ="<%=user_post_path%>">
+<a href ="<%=post_path(id)%>">
     <% @posts.each do |post| %>
         <div class="schow_posts">
         <h3><%=post.title %></h3>
