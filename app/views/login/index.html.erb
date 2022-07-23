@@ -1,0 +1,14 @@
+<div class="form">
+    <h1>Login</h1>
+    <%=form_for @form do |f| %>
+        <div>
+            <%= f.text_field :name, placeholder: "Usernama" %>
+        </div>
+        <div>
+            <%= f.text_field :bio, placeholder: "Password" %>
+        </div>
+        <div>
+            <%= link_to "login", users_path %>
+        </div>
+    <% end %>
+</div>

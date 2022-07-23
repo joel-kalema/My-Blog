@@ -1,14 +1,14 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Posts</h1>
-
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
+<div class="posts">
+    <% @posts.each do |post| %>
+        <div class="schow_posts">
+        <h3><%=post.title %></h3>
+        <p><%=post.text %></p>
+        <p><%=post.comments_counter %>
+        <p><%=post.likes_counter %>
+        <h3>Commetes</h3>
+        <% post.comments.each do |comment| %>
+            <p><%=comment.text %></p>
+        <% end %>
+        </div>
+    <% end %>
 </div>
-
-<%= link_to "New post", new_post_path %>
