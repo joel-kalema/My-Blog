@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  get '/users/:id', to: 'users#show'
-  resources :users do
-    resources :posts, only: %i[index show]
+  get 'likes/new'
+  root 'users#index'
+  resources :users, only: %i[index show] do
+    resources :posts, only: %i[index show new create] do
+      resources :comments, only: %i[new create]
+      resources :likes, only: %i[new create]
+    end
   end
-  resources :login
 end
