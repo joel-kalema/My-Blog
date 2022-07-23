@@ -3,7 +3,7 @@
     <p><%=@post.text %></p>
     <p>comment: <%=@post.comments_counter %>
     <p>likes: <%=@post.likes_counter %>
-    <% @post.comments.each do |comment| %>
+    <% @post.recent_comments.each do |comment| %>
         <p><%=comment.text %></p>
     <% end %>
 </div>
