@@ -1,9 +1,9 @@
 <div class="see_post">
     <h3><%=@post.title %></h3>
     <p><%=@post.text %></p>
-    <p><%=@post.comments_counter %>
-    <p><%=@post.likes_counter %>
-    <% @post.comments.each do |comment| %>
+    <p>comment: <%=@post.comments_counter %>
+    <p>likes: <%=@post.likes_counter %>
+    <% @post.recent_comments.each do |comment| %>
         <p><%=comment.text %></p>
     <% end %>
 </div>
