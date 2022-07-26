@@ -5,7 +5,8 @@ require 'rails_helper'
 RSpec.describe 'Users index page', type: :feature do
   before :each do
     @user = User.create(name: 'Damola', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
-    @user2 = User.create(name: 'Joel kalema', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.')
+    @user2 = User.create(name: 'Joel kalema', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                         bio: 'Teacher from Poland.')
   end
   it 'displays all users username' do
     visit '/'
