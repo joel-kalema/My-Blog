@@ -6,7 +6,7 @@
     <div class="user_container">
         <a href ="<%= user_path(user) %>" class="users">
             <div class="user">
-                <img src="<%= user.photo %>" />
+                <img src="<%= user.photo %>" alt="<%=user.name%>" />
                 <div class="user_data">
                     <h1><%= link_to user.name, user %></h1>
                     <p>Number of posts: <%= user.posts_counter %></p>
