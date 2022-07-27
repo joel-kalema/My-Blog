@@ -1,13 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe 'Test the User show page' do
-
   before :each do
-    @user = User.create(name: 'Jake', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Algeria.',posts_counter:0)
+    @user = User.create(name: 'Jake', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Algeria.',
+                        posts_counter: 0)
 
-  # add five posts for the user
+    # add five posts for the user
     5.times do |i|
-      Post.create(author: @user, title: "Post #{i}", text: 'This is my new post', comments_counter:0, likes_counter:0)
+      Post.create(author: @user, title: "Post #{i}", text: 'This is my new post', comments_counter: 0, likes_counter: 0)
     end
     visit user_path(@user.id)
   end
@@ -35,5 +35,4 @@ RSpec.describe 'Test the User show page' do
   it 'the users bio is visible' do
     expect(page).to have_content(@user.bio)
   end
-
 end

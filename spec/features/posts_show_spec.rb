@@ -2,11 +2,14 @@ require 'rails_helper'
 
 RSpec.describe 'Test the Post show page' do
   before :each do
-    @user = User.create(name: 'Joe', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.',posts_counter:0)
-    @user2 = User.create(name: 'Bella', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.',posts_counter:0)
+    @user = User.create(name: 'Joe', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.',
+                        posts_counter: 0)
+    @user2 = User.create(name: 'Bella', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.',
+                         posts_counter: 0)
 
     # add posts for the user
-    @post = Post.create(author: @user, title: 'Hello', text: 'This is my first post', comments_counter:0, likes_counter:0)
+    @post = Post.create(author: @user, title: 'Hello', text: 'This is my first post', comments_counter: 0,
+                        likes_counter: 0)
     Comment.create(post: @post, author: @user2, text: 'Hi Lilly!')
     Comment.create(post: @post, author: @user2, text: 'Hi Lilly!')
 
