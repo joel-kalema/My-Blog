@@ -22,6 +22,10 @@ RSpec.describe 'Posts index page', type: :feature do
     expect(page).to have_content(@user.name)
   end
 
+  it 'displays number of posts' do
+    expect(page).to have_content('Number of posts :1')
+  end
+
   it 'display the post title' do
     expect(page).to have_content(@first_post.title)
   end
@@ -32,5 +36,17 @@ RSpec.describe 'Posts index page', type: :feature do
 
   it 'display the first comment on a post' do
     expect(page).to have_content('Hi Lilly!')
+  end
+
+  it 'display the how many comments' do
+    expect(page).to have_content('comment: 5')
+  end
+
+  it 'display the how many Likes' do
+    expect(page).to have_content('likes: 0')
+  end
+
+  it 'after clicking on a post, redirect on a post show page' do
+    expect(page).to have_content(@first_post.text)
   end
 end
