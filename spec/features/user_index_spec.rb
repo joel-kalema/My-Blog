@@ -4,8 +4,10 @@ require 'rails_helper'
 
 RSpec.describe 'Users index page', type: :feature do
   before :each do
-    @user = User.create(name: 'hiro', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.',posts_counter:0)
-    @user2 = User.create(name: 'grace', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',bio: 'Teacher from Poland.',posts_counter:0)
+    @user = User.create(name: 'hiro', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.',
+                        posts_counter: 0)
+    @user2 = User.create(name: 'grace', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.',
+                         posts_counter: 0)
   end
   it 'displays all users username' do
     visit '/users'
