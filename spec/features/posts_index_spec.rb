@@ -6,7 +6,8 @@ RSpec.describe 'Posts index page', type: :feature do
                         posts_counter: 0)
     @user2 = User.create(name: 'Bella', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Poland.',
                          posts_counter: 0)
-    @first_post = Post.create(author: @user, title: 'Hello', text: 'This is my first post', comments_counter: 0,likes_counter: 0)
+    @first_post = Post.create(author: @user, title: 'Hello', text: 'This is my first post', comments_counter: 0,
+                              likes_counter: 0)
     5.times do |_i|
       Comment.create(post: @first_post, author: @user2, text: 'Hi Lilly!')
     end
