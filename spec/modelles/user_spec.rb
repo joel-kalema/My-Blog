@@ -19,16 +19,4 @@ RSpec.describe User, type: :model do
     subject.posts_counter = -1
     expect(subject).to_not be_valid
   end
-
-  it 'Comments should be 5' do
-    comments = Post.five_recent_comments(User.first.id, User.first.posts.first.id)
-    expect(comments.length).to eq(5)
-  end
-
-  it 'PostsCounter should be 2 ' do
-    Post.update_user_posts_counter(User.first.id)
-    Post.update_user_posts_counter(User.first.id)
-    posts_count = User.first.posts_counter
-    expect(posts_count).to eq(2)
-  end
 end

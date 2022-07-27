@@ -2,16 +2,16 @@
     <h1>My Blog</h1>
 </div>
 
-<%= @users.each do |user| %>
-    <div class="user_container">
-        <a href ="<%= user_path(user) %>" class="users">
+<% @users.each do |user| %>
+        <div class="user_container">
+        <a href="<%= user_path(user.id) %>">
             <div class="user">
-                <img src="<%= user.photo %>" alt="<%=user.name%>" />
+                <img src="<%= user.photo %>" alt="<%= user.name %>" />
                 <div class="user_data">
                     <h1><%= link_to user.name, user %></h1>
                     <p>Number of posts: <%= user.posts_counter %></p>
                 </div>
             </div>
         </a>
-    </div>
+        </div>
 <% end %>

@@ -15,7 +15,7 @@ development:
  
 test:
   <<: *default
-  database: Blog_database
+  database: Blog_database_test
 
 production:
   <<: *default
