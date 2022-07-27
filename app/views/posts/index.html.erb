@@ -1,8 +1,9 @@
 <div class="posts">
-    <img src="<%= @user.photo %>" />
+    <img src="<%= @user.photo %>" alt="<%= @user.name %>" />
     <h1><%= @user.name %></h1>
     <h2><%= @user.bio %></h2>
-    <p><%= @user.posts_counter %></p>
+    <p>Number of posts :<%= @user.posts_counter %></p>
+    <%= link_to "Create new post", new_user_post_path(@user)  %>
     <% @posts.each do |post| %>
             <div class="schow_posts">
                 <h3><%=post.title %></h3>
