@@ -46,10 +46,13 @@ RSpec.describe 'Test the User show page' do
   it 'the users bio is visible' do
     expect(page).to have_content(@user.bio)
   end
+<<<<<<< HEAD
+=======
 
   it 'go to the users post#index page when a user click on view all post' do
     click_button('See all posts')
     expect(page).to have_content(@user.bio)
     expect(page).to have_content("Number of posts: #{@user.posts_counter}")
   end
+>>>>>>> 257baf344b7bb060fecd7f70bcfa6f5ee5aff617
 end
