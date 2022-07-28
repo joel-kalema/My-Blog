@@ -2,7 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'Test the User show page' do
   before :each do
-    @user = User.create(name: 'Jake', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Algeria.',posts_counter: 0)
+    @user = User.create(name: 'Jake', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Algeria.',
+                        posts_counter: 0)
 
     # add five posts for the user
     5.times do |i|
@@ -45,13 +46,10 @@ RSpec.describe 'Test the User show page' do
   it 'the users bio is visible' do
     expect(page).to have_content(@user.bio)
   end
-<<<<<<< HEAD
-=======
 
   it 'go to the users post#index page when a user click on view all post' do
     click_button('See all posts')
     expect(page).to have_content(@user.bio)
     expect(page).to have_content("Number of posts: #{@user.posts_counter}")
   end
->>>>>>> 257baf344b7bb060fecd7f70bcfa6f5ee5aff617
 end
