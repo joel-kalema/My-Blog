@@ -2,8 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Test the User show page' do
   before :each do
-    @user = User.create(name: 'Jake', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Algeria.',
-                        posts_counter: 0)
+    @user = User.create(name: 'Jake', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Algeria.',posts_counter: 0)
 
     # add five posts for the user
     5.times do |i|
