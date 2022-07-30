@@ -2,7 +2,7 @@
 
 # My Bolg
 
-> It's time to get backlinks and that make difference;
+> It's time to get backlinks and that make difference
 
 ## Built With
 
