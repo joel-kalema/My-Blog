@@ -13,8 +13,8 @@
       src="https://user-images.githubusercontent.com/57408419/178756727-8bfad119-18c2-49eb-98be-8b2d4bd71dd6.jpeg"
       alt="react" width="120" height="70" /> </a>
 
-- Ruby on Rails
-- PostgreSQL
+- Ruby on Rails.
+- PostgreSQL.
 
 ## ![My blog](https://user-images.githubusercontent.com/57408419/178756743-c79afe4e-f60e-4ecb-90f9-de2edf808458.png)
 
