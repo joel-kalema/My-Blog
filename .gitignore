@@ -29,3 +29,5 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+temp_auto_push.bat
+temp_interactive_push.bat
