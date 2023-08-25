@@ -11,8 +11,10 @@
                 <p>comment: <%=post.comments_counter %>
                 <p>likes: <%=post.likes_counter %>
                 <% post.recent_comments.each do |comment| %>
+                    <%= button_to 'Delete comment', user_post_comment_path(comment.author, @post, comment), method: :delete, data: { confirm: 'Are you sure?' } %>    
                     <p><%=comment.text %></p>
                 <% end %>
+                <%= button_to 'Delete comment', user_post_comment_path(comment.author, @post, comment), method: :delete, data: { confirm: 'Are you sure?' } %>    
             </div>
     <% end %>
 </div>

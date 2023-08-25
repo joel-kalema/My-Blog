@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 20_220_727_134_023) do # rubocop:todo Metrics/BlockLength
+ActiveRecord::Schema[7.0].define(version: 20_220_728_101_828) do # rubocop:todo Metrics/BlockLength
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -36,8 +36,8 @@ ActiveRecord::Schema[7.0].define(version: 20_220_727_134_023) do # rubocop:todo 
   create_table 'posts', force: :cascade do |t|
     t.string 'title'
     t.string 'text'
-    t.integer 'comments_counter'
-    t.integer 'likes_counter'
+    t.integer 'comments_counter', default: 0, null: false
+    t.integer 'likes_counter', default: 0, null: false
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
     t.bigint 'author_id', null: false
@@ -48,7 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 20_220_727_134_023) do # rubocop:todo 
     t.string 'name'
     t.text 'photo'
     t.string 'bio'
-    t.integer 'posts_counter'
+    t.integer 'posts_counter', default: 0, null: false
     t.datetime 'created_at', null: false
     t.datetime 'updated_at', null: false
     t.string 'email', default: '', null: false
@@ -60,6 +60,7 @@ ActiveRecord::Schema[7.0].define(version: 20_220_727_134_023) do # rubocop:todo 
     t.datetime 'confirmed_at'
     t.datetime 'confirmation_sent_at'
     t.string 'unconfirmed_email'
+    t.string 'role', default: 'regular', null: false
     t.index ['confirmation_token'], name: 'index_users_on_confirmation_token', unique: true
     t.index ['email'], name: 'index_users_on_email', unique: true
     t.index ['reset_password_token'], name: 'index_users_on_reset_password_token', unique: true
